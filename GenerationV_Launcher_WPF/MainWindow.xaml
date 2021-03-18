@@ -12,7 +12,16 @@
 
 
     <Grid>
-        <Button Content="SaltyChat" HorizontalAlignment="Left" Margin="85,275,0,0" VerticalAlignment="Top" Width="126" Click="Button_Click_1" FontSize="20" FontWeight="Bold" Height="33" RenderTransformOrigin="0.5,0.5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="23*"/>
+        </Grid.ColumnDefinitions>
+        <Button Content="SaltyChat" HorizontalAlignment="Left" Margin="85,275,0,0" VerticalAlignment="Top" Width="126" Click="Button_Click_1" FontSize="20" FontWeight="Bold" Height="33" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Background="#FFDDDDDD">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -24,10 +33,16 @@
 
         </Button>
 
-        <Image HorizontalAlignment="Left" Height="498"  VerticalAlignment="Top" Width="516" Source="Logo 31.png" Margin="141,-99,0,0"/>
+        <Image HorizontalAlignment="Left" Height="498"  VerticalAlignment="Top" Width="516" Source="Logo 31.png" Margin="48,-99,0,0" Grid.Column="1"/>
 
 
-        <Button  HorizontalAlignment="Left" Margin="18,312,0,0" VerticalAlignment="Top" Width="194" FontSize="20" Height="70" Click="Button_Click" Foreground="Black" BorderBrush="Black" Background="#FFDDDDDD" >
+        <Button  HorizontalAlignment="Left" Margin="18,312,0,0" VerticalAlignment="Top" Width="194" FontSize="20" Height="70" Click="Button_Click" Foreground="Black" BorderBrush="Black" Background="#FFDDDDDD" Grid.ColumnSpan="2" >
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
             <StackPanel>
                 <Image HorizontalAlignment="Left" Height="61" VerticalAlignment="Top" Margin="-20,0,0,0" Width="70" Source="1609861 (Benutzerdefiniert).png"/>
                 <TextBlock RenderTransformOrigin="0.5,0.5" Margin="50,-67,0,0" Height="28" Width="110" FontWeight="Bold" FontSize="22"><Run Text="Verbinden"/></TextBlock>
@@ -35,33 +50,52 @@
 
         </Button>
 
-        <Button HorizontalAlignment="Left" Height="70" VerticalAlignment="Top" Margin="296,312,0,0" Width="194" Click="Button_Click_2">
+        <Button HorizontalAlignment="Left" Height="73" VerticalAlignment="Top" Margin="197,309,0,0" Width="196" Click="Button_Click_2" Grid.Column="1">
 
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
             <StackPanel>
                 <Image Source="iconfinder_ic_discord_logo_5761437 (1).png" RenderTransformOrigin="1.556,0.629" Height="66" Width="138"/>
             </StackPanel>
 
         </Button>
-        <Button  HorizontalAlignment="Left" Margin="583,312,0,0" VerticalAlignment="Top" Width="194" Height="70" Click="Button_Click_3">
+        <Button  HorizontalAlignment="Left" Margin="490,312,0,0" VerticalAlignment="Top" Width="194" Height="70" Click="Button_Click_3" Grid.Column="1">
+
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
 
             <StackPanel>
                 <Image Source="iconfinder_333_Teamspeak_4518723.png" RenderTransformOrigin="1.556,0.629" Height="57" Width="138"/>
             </StackPanel>
 
         </Button>
-        
-        <Button Content="Regelwerk" HorizontalAlignment="Left" Margin="583,274,0,0" VerticalAlignment="Top" Width="126" Height="33" RenderTransformOrigin="-0.212,0.393" FontSize="20" FontWeight="Bold" Click="Button_Click_4"/>
 
-        <StackPanel>
-            
-        <Label HorizontalAlignment="Left" Margin="621,0,0,373" VerticalAlignment="Bottom" Width="156" Background="#00000000" FontSize="16" Foreground="White" FontFamily=" Another Danger - Demo" Height="38" >
+        <Button Content="Regelwerk" HorizontalAlignment="Left" Margin="490,274,0,0" VerticalAlignment="Top" Width="126" Height="33" RenderTransformOrigin="-0.212,0.393" FontSize="20" FontWeight="Bold" Click="Button_Click_4" Grid.Column="1">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+
+
+
+        <StackPanel Grid.ColumnSpan="2">
+            <Label Margin="635,0,-6,373" VerticalAlignment="Bottom" Background="#00000000" FontSize="16" Foreground="White" FontFamily=" Another Danger - Demo" Height="33" HorizontalAlignment="Left" Width="162" >
 
                 <Hyperlink NavigateUri="http://lvckyworld.net" RequestNavigate="Hyperlink_RequestNavigate" Foreground="White">
-                coded by LvckyWorld&#xD;&#xA;
-                
-            </Hyperlink>
-        </Label>
-            
+                    <Run Text="coded by LvckyWorld"/>
+                </Hyperlink>
+            </Label>
+
         </StackPanel>
 
 
